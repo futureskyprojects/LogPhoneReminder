@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/btn_default"
+    android:keepScreenOn="true"
+    android:orientation="vertical"
+    tools:context=".ui.remind_alert.RemindAlertActivity">
+
+    <TextView
+        style="@style/Fastdroid.TextView.Label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:paddingHorizontal="20dp"
+        android:text="Nhắc nhở"
+        android:textAllCaps="true"
+        android:textColor="#FFF"
+        android:textSize="24sp" />
+
+    <TextView
+        style="@style/Fastdroid.TextView.Label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:paddingHorizontal="10dp"
+        android:paddingTop="20dp"
+        android:text="Số điện thoại"
+        android:textColor="#FFFFFF90"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/phoneNumber"
+        style="@style/Fastdroid.TextView.Label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="##########"
+        android:textColor="#FFFFFF"
+        android:textSize="38sp" />
+
+    <TextView
+        android:id="@+id/directionName"
+        style="@style/Fastdroid.TextView.Label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:paddingHorizontal="10dp"
+        android:text="(Hướng: Đông - Nam)"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/areaName"
+        style="@style/Fastdroid.TextView.Label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:paddingHorizontal="10dp"
+        android:text="(Khu vực: Hà Đông - Hà Nội)"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/noteContent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/dissmissButton"
+            android:background="#FFF"
+            android:hint="Nội dung ghi chú..."
+            android:padding="20dp" />
+
+        <Button
+            android:id="@+id/dissmissButton"
+            style="@style/Button.Warning"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="20dp"
+            android:text="Xác nhận" />
+    </RelativeLayout>
+</LinearLayout>

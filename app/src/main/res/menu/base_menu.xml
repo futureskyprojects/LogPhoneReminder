@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/add_new_log_phone"
+        android:icon="@drawable/add_phone_white"
+        android:orderInCategory="0"
+        android:title="Thêm số điện thoại"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/directManager"
+        android:orderInCategory="0"
+        android:title="Quản lý hướng" />
+    <item
+        android:id="@+id/areManager"
+        android:orderInCategory="0"
+        android:title="Quản lý khu vực" />
+</menu>
