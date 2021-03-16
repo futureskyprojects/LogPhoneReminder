@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "97510659186",
+    "project_id": "logphonereminder",
+    "storage_bucket": "logphonereminder.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:97510659186:android:4c5dd34041bca629d35eeb",
+        "android_client_info": {
+          "package_name": "me.vistark.logphonereminder"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "97510659186-bjrr6b48prs3413l5aeufev1j85rpk6g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCFJ5uFA2o0VTTNnoYtZvdVo7_EPwb82Ks"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "97510659186-bjrr6b48prs3413l5aeufev1j85rpk6g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

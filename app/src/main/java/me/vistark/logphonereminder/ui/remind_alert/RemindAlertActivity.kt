@@ -1,9 +1,11 @@
 package me.vistark.logphonereminder.ui.remind_alert
 
 import android.media.MediaPlayer
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Vibrator
+import android.view.WindowManager
 import com.google.gson.Gson
 import kotlinx.android.synthetic.main.activity_remind_alert.*
 import me.vistark.fastdroid_lib.ui.activities.FastdroidActivity
@@ -28,6 +30,13 @@ class RemindAlertActivity : FastdroidActivity(R.layout.activity_remind_alert) {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        if (Build.VERSION.SDK_INT >= 27)
+            setShowWhenLocked(true)
+        else
+            window.addFlags(WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED);
+
+
         ReminderLogRepository = ReminderLogRepository(this)
 
         initPrev()

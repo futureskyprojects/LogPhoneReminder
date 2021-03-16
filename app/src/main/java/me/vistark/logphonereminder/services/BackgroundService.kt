@@ -26,6 +26,7 @@ class BackgroundService : FastdroidService(
         return Date().time >= time.time
     }
 
+    var state = 0
     override fun tasks() {
         Timer().schedule(object : TimerTask() {
             override fun run() {
@@ -39,13 +40,19 @@ class BackgroundService : FastdroidService(
                     (remindedCount / totalCount).toInt()
                 }
                 if (totalCount <= 0 || remindedCount == totalCount) {
-                    updateDefault()
+                    if (state != 0) {
+                        state = 0
+                        updateDefault()
+                    }
                 } else {
-                    updateProgress("Đã nhắc ${remindedCount}/${totalCount}", progress)
-                    // Tìm record có thời gian là hiện tại và chưa được nhắc
-                    val x = filteredRecords.firstOrNull { x -> isInTime(x.RemindAt) }
-                    if (x != null) {
-                        startActivityForAlert(x.Id)
+                    if (state != 1) {
+                        state = 1
+                        updateProgress("Đã nhắc ${remindedCount}/${totalCount}", progress)
+                        // Tìm record có thời gian là hiện tại và chưa được nhắc
+                        val x = filteredRecords.firstOrNull { x -> isInTime(x.RemindAt) }
+                        if (x != null) {
+                            startActivityForAlert(x.Id)
+                        }
                     }
                 }
             }

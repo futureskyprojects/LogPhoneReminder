@@ -14,7 +14,7 @@ object WakeLock {
                     PowerManager.ACQUIRE_CAUSES_WAKEUP or
                     PowerManager.ON_AFTER_RELEASE, "WakeLock"
         )
-        wakelock.acquire(60 * 1000L)
+        wakelock.acquire(10 * 60 * 1000L)
         return wakelock
     }
 }
